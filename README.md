@@ -1,6 +1,6 @@
-# Smart Task Manager
+# Full-Stack App with Python
 
-## Python Internship Project
+## Smart Task Manager
 
 **Intern Name:** Suraj Sahu  
 **Internship ID:** CITS2253
