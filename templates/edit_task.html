@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Edit Task</h2>
+
+<form method="POST">
+
+<div class="mb-3">
+<label>Title</label>
+
+<input
+type="text"
+name="title"
+class="form-control"
+value="{{ task.title }}"
+required>
+
+</div>
+
+<div class="mb-3">
+<label>Description</label>
+
+<textarea
+name="description"
+class="form-control">{{ task.description }}</textarea>
+
+</div>
+
+<div class="mb-3">
+
+<label>Priority</label>
+
+<select name="priority" class="form-control">
+
+<option {% if task.priority=="High" %}selected{% endif %}>High</option>
+
+<option {% if task.priority=="Medium" %}selected{% endif %}>Medium</option>
+
+<option {% if task.priority=="Low" %}selected{% endif %}>Low</option>
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label>Status</label>
+
+<select name="status" class="form-control">
+
+<option {% if task.status=="Pending" %}selected{% endif %}>Pending</option>
+
+<option {% if task.status=="Completed" %}selected{% endif %}>Completed</option>
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label>Due Date</label>
+
+<input
+type="date"
+name="due_date"
+class="form-control"
+value="{{ task.due_date }}">
+
+</div>
+
+<button class="btn btn-success">
+Update Task
+</button>
+
+</form>
+
+{% endblock %}
